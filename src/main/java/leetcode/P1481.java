@@ -2,20 +2,19 @@ package leetcode;
 
 import java.util.*;
 
-class Pair {
-    public int key;
-    public int value;
-
-    public Pair(int key, int value) {
-        this.key = key;
-        this.value = value;
-    }
-}
 
 public class P1481 {
-    public int findLeastNumOfUniqueInts(int[] arr, int k) {
-//        Arrays.sort(arr);
 
+    static class Pair {
+        public int key;
+        public int value;
+
+        public Pair(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+    }
+    public int findLeastNumOfUniqueInts(int[] arr, int k) {
 
         Map<Integer, Integer> map = new HashMap<>();
         for (int number : arr) {
