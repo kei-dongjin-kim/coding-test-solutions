@@ -4,22 +4,21 @@ import java.util.ArrayList;
 
 public class P0876 {
     // Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
 
     public ListNode middleNode(ListNode head) {
-        ArrayList<ListNode> array = new ArrayList<>();
-
-        while (head != null) {
-            array.add(head);
-            head = head.next;
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
         }
+        return slow;
 
-        return array.get(array.size()/2);
+//        ArrayList<ListNode> array = new ArrayList<>();
+//        while (head != null) {
+//            array.add(head);
+//            head = head.next;
+//        }
+//        return array.get(array.size()/2);
     }
 }

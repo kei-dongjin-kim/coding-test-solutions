@@ -3,7 +3,6 @@ package leetcode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import leetcode.P0876.ListNode;
 
 public class P0876Test {
 
