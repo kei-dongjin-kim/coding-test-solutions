@@ -26,4 +26,18 @@ public class ListNode {
         result = 31 * result + (next != null ? next.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        ListNode node = this;
+        while (node != null) {
+            sb.append(node.val);
+            node = node.next;
+            if (node != null) {
+                sb.append(" -> ");
+            }
+        }
+        return sb.toString();
+    }
 }
