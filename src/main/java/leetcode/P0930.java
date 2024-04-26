@@ -3,7 +3,7 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class P930 {
+public class P0930 {
     public int numSubarraysWithSum(int[] nums, int goal) {
         int totalCount = 0;
         int currentSum = 0;
