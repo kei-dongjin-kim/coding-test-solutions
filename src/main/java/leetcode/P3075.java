@@ -1,7 +1,6 @@
 package leetcode;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class P3075 {
     public long maximumHappinessSum(int[] happiness, int k) {

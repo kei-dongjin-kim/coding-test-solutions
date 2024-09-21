@@ -68,7 +68,7 @@ public class P0629 {
     // 4 1 2 3 3
     // 5 1 2 4 5
 
-    public static int kInversePairs(int n, int k) {
+    public int kInversePairs(int n, int k) {
         int[][] dp = new int[n+1][k+1];
 
         for (int[] row : dp) {

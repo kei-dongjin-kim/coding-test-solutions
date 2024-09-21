@@ -2,7 +2,6 @@ package leetcode;
 
 public class P1419 {
     public int longestSubarray(int[] nums) {
-        int len = nums.length;
         int maxValue = 0;
         int maxCount = 0;
         int currCount = 0;

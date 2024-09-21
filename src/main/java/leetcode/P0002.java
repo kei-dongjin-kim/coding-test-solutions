@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.ArrayList;
-
 public class P0002 {
 
     public static class ListNode {

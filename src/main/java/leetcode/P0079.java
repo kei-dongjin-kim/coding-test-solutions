@@ -7,7 +7,6 @@ public class P0079 {
         }
         int m = board.length;
         int n = board[0].length;
-        boolean[][] visited = new boolean[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 boolean res = dfs(board, word, i, j, 0);

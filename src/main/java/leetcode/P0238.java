@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.Arrays;
-
 public class P0238 {
     public int[] productExceptSelf(int[] nums) {
         int len = nums.length;

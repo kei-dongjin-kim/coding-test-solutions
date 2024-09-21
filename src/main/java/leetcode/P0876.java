@@ -1,6 +1,6 @@
 package leetcode;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
 public class P0876 {
     // Definition for singly-linked list.

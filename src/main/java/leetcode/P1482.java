@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.stream.IntStream;
-
 public class P1482 {
     public int minDays(int[] bloomDay, int m, int k) {
         if (m * k > bloomDay.length) return -1;

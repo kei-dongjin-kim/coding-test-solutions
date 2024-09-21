@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.Arrays;
-
 public class P1043 {
     public int maxSumAfterPartitioning(int[] arr, int k) {
 

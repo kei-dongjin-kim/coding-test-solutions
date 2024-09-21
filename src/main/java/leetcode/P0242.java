@@ -1,7 +1,7 @@
 package leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
+// import java.util.HashMap;
+// import java.util.Map;
 
 public class P0242 {
     public boolean isAnagram(String s, String t) {

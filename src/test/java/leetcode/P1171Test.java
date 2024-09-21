@@ -15,7 +15,6 @@ public class P1171Test {
         head.next.next.next.next = new ListNode(1);
         P1171 solution = new P1171();
         ListNode result = solution.removeZeroSumSublists(head);
-        ListNode result2 = solution.removeZeroSumSublists(head);
         assert 3 == result.val;
         assert 1 == result.next.val;
     }

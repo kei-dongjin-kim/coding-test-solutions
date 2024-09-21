@@ -3,8 +3,6 @@ package leetcode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 public class P1043Test {
 
     @Test

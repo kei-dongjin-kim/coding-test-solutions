@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.Arrays;
-
 public class P0165 {
     public int compareVersion(String version1, String version2) {
         if (version1.equals(version2)) return 0;
