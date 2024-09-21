@@ -12,7 +12,6 @@ public class P0482Test {
     int k = 4;
     String expected = "ABCD-EFGH";
     String actual = new P0482().licenseKeyFormatting(s,k);
-    System.out.println("actual:" + actual);
     assert expected.equals(actual);
   }
   
