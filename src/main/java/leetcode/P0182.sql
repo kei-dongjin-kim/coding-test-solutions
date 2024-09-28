@@ -1,3 +1,4 @@
+-- Oracle
 SELECT
     email
 FROM
