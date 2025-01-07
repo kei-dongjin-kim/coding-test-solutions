@@ -2,38 +2,46 @@ package leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class P0368 {
-    public List<Integer> largestDivisibleSubset(int[] nums) {
-        Arrays.sort(nums);
-        int[][] dp = new int[nums.length][];
-        dp[0] = new int[] {nums[0]};
-        int count = 0;
-        // dp
-        for (int i=1 ; i<nums.length ; i++)  {
-            // dp
-            boolean found = true;
-            for (int j : dp[i-1]) {
-                if (nums[i] % j != 0) {
-                    found = false;
-                    break;
-                }
-            }
-            if (found) {
-                int[] newArr = new int[dp[i-1].length + 1];
-                System.arraycopy(dp[i-1], 0, newArr, 0, dp[i-1].length);
-                newArr[dp[i-1].length] = nums[i];
-                dp[i] = newArr;
-                count++;
-            }
-        }
-
-        List<Integer> result = new ArrayList<>();
-        for (int i=0 ; i<dp[count].length ; i++) {
-            result.add(dp[count][i]);
-        }
-
-        return  result;
+  public List<Integer> largestDivisibleSubset(int[] nums) {
+    Arrays.sort(nums);
+    int n = nums.length;
+    
+    if (n == 0) {
+      return new ArrayList<>();
     }
+
+    int[] dp = new int[n];
+    int[] prev = new int[n];
+    int maxIndex = 0;
+    int maxSize = 1;
+
+    Arrays.fill(dp, 1);
+    Arrays.fill(prev, -1);
+
+    for (int i = 1; i < n; i++) {
+        for (int j = 0; j < i; j++) {
+            if (nums[i] % nums[j] == 0 && dp[i] < dp[j] + 1) {
+                dp[i] = dp[j] + 1;
+                prev[i] = j;
+            }
+        }
+        if (dp[i] > maxSize) {
+            maxSize = dp[i];
+            maxIndex = i;
+        }
+    }
+
+    List<Integer> result = new ArrayList<>();
+    while (maxIndex != -1) {
+        result.add(nums[maxIndex]);
+        maxIndex = prev[maxIndex];
+    }
+    Collections.reverse(result);
+
+    return result;
+  }
 }
