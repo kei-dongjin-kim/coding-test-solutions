@@ -1,6 +1,6 @@
 package leetcode;
 
-public class P0278 {
+public class    P0278 {
     int badVersion;
 
     public P0278(int badVersion) {
